@@ -1,0 +1,298 @@
+1. Sơ đồ chuỗi Prompt (Prompt Chaining)
+PROMPT 1
+Phân tích khách hàng mục tiêu
+        ↓
+PERSONA_DATA
+
+PROMPT 2
+Xây dựng thông điệp truyền thông
+(dựa trên PERSONA_DATA)
+        ↓
+MESSAGE_DATA
+
+PROMPT 3
+Lập kế hoạch nội dung 7 ngày
+(dựa trên PERSONA_DATA + MESSAGE_DATA)
+        ↓
+CONTENT_PLAN
+
+PROMPT 4
+Viết Facebook Ads + Kịch bản TikTok
+(dựa trên CONTENT_PLAN)
+        ↓
+CREATIVE_CONTENT
+
+PROMPT 5
+Kiểm tra tính nhất quán toàn chiến dịch
+(dựa trên tất cả output trước)
+        ↓
+CONSISTENCY_REPORT
+
+Prompt 1: Phân tích khách hàng mục tiêu
+Bạn là chuyên gia nghiên cứu khách hàng trong lĩnh vực đào tạo CNTT.
+
+Thông tin khóa học:
+
+- Khóa học: Python cơ bản
+- Đối tượng: Sinh viên năm nhất
+- Độ tuổi: 18-20
+- Thời lượng: 8 tuần
+- Mục tiêu chiến dịch: 100 lượt đăng ký tư vấn
+- Kênh: Facebook và TikTok
+
+Nhiệm vụ:
+
+1. Phân tích chân dung khách hàng mục tiêu.
+2. Xác định:
+   - Nhu cầu
+   - Mục tiêu
+   - Khó khăn
+   - Rào cản đăng ký học
+3. Liệt kê 5 pain points.
+4. Liệt kê 5 động lực thúc đẩy đăng ký khóa học.
+
+Trả kết quả dạng JSON:
+
+{
+  "persona": {},
+  "pain_points": [],
+  "motivations": [],
+  "communication_preferences": []
+}
+
+Prompt 2: Xây dựng thông điệp truyền thông
+Dựa trên dữ liệu PERSONA_DATA dưới đây:
+
+{OUTPUT_PROMPT_1}
+
+Hãy:
+
+1. Xác định thông điệp truyền thông chính.
+2. Xây dựng:
+   - Slogan
+   - Giá trị nổi bật của khóa học
+   - Lợi ích người học nhận được sau 8 tuần
+3. Giải thích vì sao thông điệp phù hợp với đối tượng.
+
+Trả về:
+
+{
+   "main_message":"",
+   "slogan":"",
+   "key_benefits":[],
+   "supporting_messages":[]
+}
+
+Prompt 3: Lập kế hoạch nội dung 7 ngày
+Sử dụng:
+
+PERSONA_DATA:
+{OUTPUT_PROMPT_1}
+
+MESSAGE_DATA:
+{OUTPUT_PROMPT_2}
+
+Nhiệm vụ:
+
+Lập kế hoạch nội dung 7 ngày cho Facebook và TikTok.
+
+Mỗi ngày gồm:
+
+- Mục tiêu content
+- Chủ đề
+- Thông điệp chính
+- Định dạng nội dung
+- CTA
+
+Trả về bảng chi tiết.
+
+Prompt 4: Viết nội dung quảng cáo
+Dựa trên:
+
+PERSONA_DATA
+MESSAGE_DATA
+CONTENT_PLAN
+
+Viết:
+
+1. Hai bài đăng Facebook.
+2. Hai kịch bản TikTok 30–45 giây.
+
+Yêu cầu:
+
+- Giữ thống nhất thông điệp.
+- Phù hợp sinh viên năm nhất.
+- CTA đăng ký tư vấn.
+- Văn phong trẻ trung nhưng đáng tin cậy.
+
+Prompt 5: Kiểm tra tính nhất quán
+Phân tích toàn bộ chiến dịch:
+
+- Persona
+- Message
+- Content Plan
+- Facebook Posts
+- TikTok Scripts
+
+Kiểm tra:
+
+1. Thông điệp có nhất quán không?
+2. Nội dung có phù hợp sinh viên năm nhất không?
+3. CTA có thống nhất không?
+4. Có nội dung nào lệch mục tiêu thu hút đăng ký tư vấn không?
+5. Đề xuất chỉnh sửa nếu cần.
+
+Trả về báo cáo đánh giá.
+
+2. Chân dung khách hàng mục tiêu
+Tiêu chí	Mô tảĐối tượng	Sinh viên năm nhất
+Độ tuổi	18–20
+Trình độ	Mới tiếp cận lập trình
+Mục tiêu	Học kỹ năng công nghệ để phục vụ học tập và nghề nghiệp
+Khó khăn	Không biết bắt đầu học lập trình từ đâu
+Pain Point 1	Sợ lập trình khó
+Pain Point 2	Thiếu lộ trình học rõ ràng
+Pain Point 3	Chưa có nền tảng CNTT
+Pain Point 4	Thiếu dự án thực hành
+Pain Point 5	Lo ngại học xong không áp dụng được
+Động lực đăng ký
+Muốn học kỹ năng công nghệ sớm.
+Chuẩn bị cho thực tập tương lai.
+Tạo lợi thế cạnh tranh.
+Khám phá ngành CNTT.
+Xây dựng nền tảng học AI và Data Science.
+3. Thông điệp truyền thông chính
+Thông điệp chính
+
+"Bắt đầu học lập trình Python từ con số 0, xây dựng nền tảng công nghệ vững chắc chỉ trong 8 tuần."
+
+Slogan
+
+"Python cho người mới - Học dễ, làm được, tiến xa."
+
+Giá trị cốt lõi
+Không yêu cầu kiến thức trước.
+Lộ trình rõ ràng.
+Học qua thực hành.
+Xây nền tảng cho các lĩnh vực công nghệ hiện đại.
+Phù hợp sinh viên năm nhất.
+4. Lịch đăng nội dung 7 ngày
+Ngày	Chủ đề	Kênh	Mục tiêu	CTA1	Python là gì?	Facebook	Nhận diện	Đăng ký tư vấn
+2	5 lý do sinh viên nên học Python	TikTok	Thu hút	Đăng ký tư vấn
+3	Học Python có khó không?	Facebook	Giải quyết nỗi sợ	Đăng ký tư vấn
+4	Demo một bài tập Python đơn giản	TikTok	Tăng hứng thú	Đăng ký tư vấn
+5	Cơ hội nghề nghiệp từ Python	Facebook	Xây dựng động lực	Đăng ký tư vấn
+6	Chia sẻ trải nghiệm học thử	TikTok	Tạo niềm tin	Đăng ký tư vấn
+7	Tổng hợp lợi ích khóa học	Facebook + TikTok	Chốt chuyển đổi	Đăng ký tư vấn
+5. Hai bài đăng Facebook
+Bài đăng Facebook 1
+Python có thực sự khó với sinh viên năm nhất?
+
+Nhiều sinh viên nghĩ rằng lập trình chỉ dành cho những người đã có nền tảng công nghệ. Thực tế, Python là một trong những ngôn ngữ dễ tiếp cận nhất cho người mới bắt đầu.
+
+✅ Cú pháp đơn giản
+
+✅ Dễ đọc, dễ hiểu
+
+✅ Được sử dụng rộng rãi trong AI, Data Science và phát triển phần mềm
+
+Khóa học Python cơ bản 8 tuần được thiết kế dành riêng cho sinh viên năm nhất, giúp bạn bắt đầu từ con số 0 và từng bước xây dựng tư duy lập trình.
+
+👉 Đăng ký tư vấn ngay hôm nay để nhận thông tin chi tiết.
+
+Bài đăng Facebook 2
+8 tuần hôm nay có thể tạo lợi thế cho 4 năm đại học sắp tới
+
+Nếu bắt đầu học Python ngay từ năm nhất, bạn có thể:
+
+Hiểu tư duy lập trình sớm
+Làm quen với công nghệ hiện đại
+Chuẩn bị cho các môn học chuyên ngành
+Tạo nền tảng cho AI và Data Science
+
+Đừng đợi đến khi tìm thực tập mới bắt đầu học kỹ năng công nghệ.
+
+🚀 Hãy bắt đầu từ Python.
+
+👉 Đăng ký nhận tư vấn miễn phí ngay hôm nay.
+
+6. Hai kịch bản TikTok (30–45 giây)
+TikTok 1: "Sinh viên năm nhất có học được Python không?"
+Cảnh 1 (0–5s)
+
+Text:
+
+"Bạn là sinh viên năm nhất và chưa từng lập trình?"
+
+Cảnh 2 (5–15s)
+
+Người dẫn:
+
+"Tin vui là Python được xem là một trong những ngôn ngữ dễ học nhất cho người mới."
+
+Cảnh 3 (15–30s)
+
+Hiển thị:
+
+Biến
+Vòng lặp
+In dòng chữ Hello World
+
+Người dẫn:
+
+"Chỉ sau vài buổi học, bạn đã có thể tự viết những chương trình đơn giản."
+
+Cảnh 4 (30–45s)
+
+Người dẫn:
+
+"Khóa Python cơ bản 8 tuần được thiết kế dành riêng cho người mới bắt đầu."
+
+Text:
+
+"Đăng ký tư vấn ngay."
+
+TikTok 2: "Vì sao nên học Python từ năm nhất?"
+Cảnh 1 (0–7s)
+
+Text:
+
+"Đừng đợi đến năm cuối mới học lập trình."
+
+Cảnh 2 (7–20s)
+
+Người dẫn:
+
+"Python giúp bạn làm quen với tư duy lập trình và mở rộng cơ hội tiếp cận các lĩnh vực công nghệ hiện đại."
+
+Cảnh 3 (20–35s)
+
+Hiển thị:
+
+Học tập
+Thực hành
+Dự án cá nhân
+
+Người dẫn:
+
+"Kiến thức nền tảng hôm nay sẽ trở thành lợi thế của bạn trong những năm học tiếp theo."
+
+Cảnh 4 (35–45s)
+
+Text:
+
+"Python từ con số 0 trong 8 tuần."
+
+CTA:
+
+"Đăng ký tư vấn miễn phí."
+
+7. Báo cáo kiểm tra tính nhất quán
+Tiêu chí	Kết quả
+Persona nhất quán	
+Thông điệp xuyên suốt	
+Không thay đổi thông tin khóa học	
+Đúng đối tượng sinh viên năm nhất	
+CTA thống nhất	
+Facebook và TikTok cùng thông điệp	
+Hướng tới mục tiêu 100 đăng ký tư vấn	

@@ -1,0 +1,292 @@
+Thiết kế Prompt Chaining 3 bước để viết bài PR sản phẩm AI Chatbot cho doanh nghiệp
+Mục tiêu thiết kế
+
+Chuỗi Prompt phải đảm bảo:
+
+Chia nhỏ tác vụ phức tạp thành các công đoạn độc lập.
+Duy trì ngữ cảnh xuyên suốt từ nghiên cứu khách hàng → xây dựng dàn ý → viết bài.
+Tránh lặp ý, thiếu chiều sâu và đứt gãy nội dung.
+Giữ nguyên giọng điệu chuyên nghiệp, tư vấn, đáng tin cậy.
+Hỗ trợ tiếp tục sinh nội dung chính xác khi gặp giới hạn token.
+Kiến trúc Prompt Chain
+Prompt 1
+↓
+Customer Persona + Pain Points Data
+
+Prompt 2
+↓
+SEO Outline Data
+
+Prompt 3
+↓
+Bài PR hoàn chỉnh
+
+Prompt 1: Nghiên cứu khách hàng và Pain Points
+Mục tiêu
+
+Xác định:
+
+Khách hàng mục tiêu
+Bối cảnh doanh nghiệp
+Khó khăn đang gặp phải
+Nhu cầu thực tế
+Giá trị AI Chatbot mang lại
+Prompt
+Bạn là chuyên gia Marketing B2B và nghiên cứu khách hàng doanh nghiệp.
+
+Sản phẩm cần quảng bá:
+
+Tên sản phẩm: {TEN_SAN_PHAM}
+Loại sản phẩm: AI Chatbot cho doanh nghiệp
+
+Nhiệm vụ:
+
+Phân tích nhóm khách hàng mục tiêu phù hợp nhất với sản phẩm.
+
+Thực hiện các bước sau:
+
+1. Xác định chân dung khách hàng mục tiêu (Customer Persona)
+   - Chức danh
+   - Quy mô doanh nghiệp
+   - Ngành nghề
+   - Mục tiêu công việc
+
+2. Liệt kê tối thiểu 10 pain points lớn nhất liên quan đến:
+   - Chăm sóc khách hàng
+   - Hỗ trợ bán hàng
+   - Quản lý dữ liệu khách hàng
+   - Tối ưu chi phí vận hành
+
+3. Phân tích nguyên nhân gây ra từng pain point.
+
+4. Mô tả sản phẩm AI Chatbot có thể giải quyết pain point như thế nào.
+
+5. Xác định:
+   - 5 lợi ích cốt lõi
+   - 5 lợi ích kinh doanh
+   - 5 lợi ích tài chính
+
+TRẢ KẾT QUẢ THEO JSON:
+
+{
+  "customer_persona": {},
+  "pain_points": [],
+  "pain_point_solutions": [],
+  "core_benefits": [],
+  "business_benefits": [],
+  "financial_benefits": [],
+  "recommended_keywords": []
+}
+
+Không viết bài PR.
+Không sáng tác nội dung marketing.
+Chỉ nghiên cứu và phân tích.
+
+Dữ liệu bắt buộc truyền sang Prompt 2
+
+Output JSON từ Prompt 1 phải được sử dụng nguyên vẹn.
+
+CONTEXT_DATA = Output Prompt 1
+
+Prompt 2: Xây dựng dàn ý SEO
+Mục tiêu
+
+Biến kết quả nghiên cứu thành khung bài PR chuyên sâu.
+
+Prompt
+Bạn là Content Strategist chuyên viết bài PR công nghệ.
+
+Dưới đây là dữ liệu nghiên cứu khách hàng:
+
+=== CONTEXT_DATA ===
+{OUTPUT_PROMPT_1}
+=== END ===
+
+NHIỆM VỤ
+
+Dựa hoàn toàn vào dữ liệu trên:
+
+1. Xây dựng tiêu đề chính (Headline)
+   - Thu hút
+   - Tập trung giải quyết pain points
+
+2. Tạo Meta Title
+
+3. Tạo Meta Description
+
+4. Xây dựng Outline SEO chi tiết gồm:
+
+H1
+
+Lead
+
+H2
+
+H2
+  H3
+  H3
+
+H2
+  H3
+  H3
+
+H2
+
+H2
+
+CTA
+
+5. Với mỗi H2 hoặc H3, mô tả:
+
+- Mục tiêu nội dung
+- Pain point liên quan
+- Lợi ích cần nhấn mạnh
+- Từ khóa SEO cần xuất hiện
+
+YÊU CẦU
+
+Không viết nội dung chi tiết.
+
+Chỉ tạo dàn ý.
+
+TRẢ VỀ JSON:
+
+{
+  "headline":"",
+  "meta_title":"",
+  "meta_description":"",
+  "primary_keyword":"",
+  "secondary_keywords":[],
+  "outline":[]
+}
+
+Dữ liệu bắt buộc truyền sang Prompt 3
+OUTLINE_DATA = Output Prompt 2
+CUSTOMER_DATA = Output Prompt 1
+
+Prompt 3: Viết bài PR hoàn chỉnh
+Mục tiêu
+
+Tạo bài PR 1000-1500 từ chuẩn SEO.
+
+Prompt
+Bạn là chuyên gia Copywriting công nghệ B2B.
+
+GIỌNG ĐIỆU BẮT BUỘC
+
+- Chuyên nghiệp
+- Đáng tin cậy
+- Thuyết phục bằng dữ liệu
+- Không giật tít quá mức
+- Không thay đổi tone giữa các phần
+
+DỮ LIỆU NGHIÊN CỨU
+
+=== CUSTOMER_DATA ===
+{OUTPUT_PROMPT_1}
+=== END ===
+
+DÀN Ý
+
+=== OUTLINE_DATA ===
+{OUTPUT_PROMPT_2}
+=== END ===
+
+NHIỆM VỤ
+
+Viết bài PR hoàn chỉnh có độ dài từ 1000 đến 1500 từ.
+
+Yêu cầu:
+
+1. Sử dụng đúng cấu trúc trong outline.
+
+2. Triển khai đầy đủ:
+   - Headline
+   - Lead
+   - Tất cả H2
+   - Tất cả H3
+   - CTA
+
+3. Tích hợp SEO tự nhiên:
+   - Từ khóa chính
+   - Từ khóa phụ
+
+4. Mỗi H2 phải giải quyết ít nhất một pain point đã xác định.
+
+5. Không lặp lại cùng một luận điểm quá 2 lần.
+
+6. Các đoạn chuyển tiếp giữa các phần phải mượt và logic.
+
+7. Kết thúc bằng CTA rõ ràng.
+
+8. Đánh dấu trạng thái cuối bài:
+
+[COMPLETED]
+
+Nếu nội dung vượt giới hạn token:
+
+- Dừng tại cuối đoạn hoàn chỉnh gần nhất.
+- Không cắt giữa câu.
+- Thêm nhãn:
+
+[CONTINUE_FROM: tên mục gần nhất]
+
+Cơ chế xử lý khi bị ngắt do Max Token
+Lệnh tiếp tục chuẩn hóa
+
+Khi AI dừng giữa chừng:
+
+Prompt tiếp tục
+Tiếp tục bài viết từ vị trí:
+
+[CONTINUE_FROM: tên mục gần nhất]
+
+QUAN TRỌNG:
+
+- Không viết lại nội dung đã sinh.
+- Giữ nguyên văn phong.
+- Giữ nguyên cấu trúc H2/H3.
+- Nối chính xác với câu cuối cùng trước khi bị ngắt.
+- Tiếp tục cho đến khi gặp nhãn [COMPLETED].
+
+Chuẩn dữ liệu truyền giữa các bước
+Prompt 1 Output
+{
+  "customer_persona": {},
+  "pain_points": [],
+  "pain_point_solutions": [],
+  "core_benefits": [],
+  "business_benefits": [],
+  "financial_benefits": [],
+  "recommended_keywords": []
+}
+
+
+↓
+
+Prompt 2 Output
+{
+  "headline": "",
+  "meta_title": "",
+  "meta_description": "",
+  "primary_keyword": "",
+  "secondary_keywords": [],
+  "outline": []
+}
+
+
+↓
+
+Prompt 3 Output
+Headline
+
+Lead
+
+H2...
+
+H3...
+
+CTA
+
+[COMPLETED]
+

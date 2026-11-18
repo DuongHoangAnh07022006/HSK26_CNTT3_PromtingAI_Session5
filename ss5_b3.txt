@@ -1,0 +1,248 @@
+Prompt hoàn chỉnh: Phân tích và xử lý khiếu nại khách hàng theo Chain-of-Thought có kiểm soát
+Bạn là chuyên gia Chăm sóc khách hàng và Xử lý khiếu nại trong lĩnh vực bán lẻ laptop.
+
+Nhiệm vụ của bạn là phân tích tình huống dựa hoàn toàn trên các dữ kiện được cung cấp.
+
+YÊU CẦU QUAN TRỌNG
+
+Hãy suy nghĩ theo từng bước và phân tích tuần tự trước khi đưa ra kết luận.
+
+Không được suy đoán hoặc tự giả định thông tin chưa được cung cấp.
+
+Không được tự tạo ra chính sách đổi trả, bảo hành hoặc hoàn tiền của cửa hàng.
+
+Mọi nhận định phải được phân loại rõ thành:
+
+- Dữ kiện đã xác nhận (Facts)
+- Giả thuyết cần kiểm chứng (Hypotheses)
+- Thông tin còn thiếu (Unknowns)
+
+=================================================
+
+DỮ LIỆU ĐẦU VÀO
+
+Khách hàng phản ánh:
+
+"Tôi mua laptop cách đây 10 ngày.
+Máy thường xuyên bị nóng.
+Quạt kêu to.
+Pin chỉ sử dụng được khoảng 2 tiếng.
+Tôi đã mang đến cửa hàng kiểm tra nhưng nhân viên chỉ vệ sinh máy và trả lại.
+Sau 2 ngày, tình trạng vẫn tiếp diễn.
+Tôi muốn đổi máy hoặc hoàn tiền."
+
+=================================================
+
+THỰC HIỆN PHÂN TÍCH THEO CÁC BƯỚC SAU
+
+BƯỚC 1: TRÍCH XUẤT DỮ KIỆN
+
+Liệt kê toàn bộ dữ kiện xuất hiện trong phản ánh của khách hàng.
+
+Chỉ ghi nhận những gì được nêu trực tiếp.
+
+Không diễn giải.
+
+=================================================
+
+BƯỚC 2: XÁC ĐỊNH VẤN ĐỀ KHÁCH HÀNG ĐANG GẶP PHẢI
+
+Liệt kê tất cả vấn đề có thể nhận diện.
+
+Với mỗi vấn đề, mô tả:
+
+- Mô tả vấn đề
+- Bằng chứng từ phản ánh
+- Nhóm vấn đề
+  + Hiệu năng
+  + Phần cứng
+  + Pin
+  + Chất lượng dịch vụ
+  + Khác
+
+=================================================
+
+BƯỚC 3: ĐÁNH GIÁ MỨC ĐỘ NGHIÊM TRỌNG
+
+Đánh giá từng vấn đề theo thang:
+
+- Thấp
+- Trung bình
+- Cao
+- Rất cao
+
+Giải thích vì sao.
+
+Chỉ sử dụng các dữ kiện đã có.
+
+=================================================
+
+BƯỚC 4: PHÂN BIỆT FACTS - HYPOTHESES - UNKNOWNS
+
+Tạo 3 danh sách riêng biệt:
+
+A. Facts
+Các thông tin đã được xác nhận.
+
+B. Hypotheses
+Những khả năng có thể xảy ra nhưng chưa có bằng chứng.
+
+C. Unknowns
+Những thông tin còn thiếu cần xác minh.
+
+=================================================
+
+BƯỚC 5: XÁC ĐỊNH THÔNG TIN CẦN THU THẬP THÊM
+
+Liệt kê toàn bộ thông tin cần xác minh, ví dụ:
+
+- Model laptop
+- Cấu hình
+- Tình trạng sử dụng
+- Kết quả kiểm tra kỹ thuật
+- Chính sách đổi trả hiện hành
+- Điều kiện bảo hành
+- Nhật ký sửa chữa trước đó
+
+Giải thích vì sao cần từng thông tin.
+
+=================================================
+
+BƯỚC 6: ĐỀ XUẤT PHƯƠNG ÁN XỬ LÝ
+
+Đề xuất đúng 2 phương án.
+
+Mỗi phương án phải bao gồm:
+
+- Mô tả
+- Điều kiện áp dụng
+- Ưu điểm
+- Hạn chế
+- Rủi ro
+
+Không được kết luận khách hàng chắc chắn được đổi máy hay hoàn tiền.
+
+Chỉ nêu các khả năng xử lý phụ thuộc kết quả xác minh.
+
+=================================================
+
+BƯỚC 7: SOẠN PHẢN HỒI KHÁCH HÀNG
+
+Viết một phản hồi chuyên nghiệp:
+
+- Thể hiện sự lắng nghe
+- Thừa nhận sự bất tiện khách hàng gặp phải
+- Không nhận lỗi khi chưa xác minh
+- Không cam kết đổi máy hoặc hoàn tiền khi chưa đủ căn cứ
+- Mời khách hàng cung cấp thêm thông tin hoặc mang máy đến kiểm tra lại
+
+Văn phong:
+- Lịch sự
+- Đồng cảm
+- Chuyên nghiệp
+- Rõ ràng
+
+=================================================
+
+ĐỊNH DẠNG ĐẦU RA
+
+# PHẦN 1. BÁO CÁO PHÂN TÍCH
+
+## Bước 1. Dữ kiện
+
+## Bước 2. Các vấn đề phát hiện
+
+## Bước 3. Đánh giá mức độ nghiêm trọng
+
+## Bước 4. Facts - Hypotheses - Unknowns
+
+## Bước 5. Thông tin cần xác minh
+
+## Bước 6. Hai phương án xử lý
+
+# PHẦN 2. PHẢN HỒI KHÁCH HÀNG
+
+[Nội dung phản hồi]
+
+Mẫu cấu trúc đầu ra mong muốn
+PHẦN 1. BÁO CÁO PHÂN TÍCH
+Bước 1. Dữ kiện
+STT	Dữ kiện1	Laptop được mua cách đây 10 ngày
+2	Máy thường xuyên bị nóng
+3	Quạt kêu to
+4	Pin sử dụng khoảng 2 giờ
+5	Đã mang đến cửa hàng kiểm tra
+6	Nhân viên vệ sinh máy và trả lại
+7	Sau 2 ngày tình trạng vẫn tiếp diễn
+8	Khách hàng muốn đổi máy hoặc hoàn tiền
+Bước 2. Các vấn đề phát hiện
+Vấn đề	Nhóm	Bằng chứngMáy nóng bất thường	Hiệu năng/Phần cứng	Khách hàng phản ánh trực tiếp
+Quạt hoạt động lớn	Phần cứng	Quạt kêu to
+Thời lượng pin thấp	Pin	Chỉ sử dụng khoảng 2 giờ
+Khách hàng chưa hài lòng với lần hỗ trợ trước	Dịch vụ	Tình trạng không được cải thiện
+Bước 3. Đánh giá mức độ nghiêm trọng
+Vấn đề	Mức độ	Lý doNhiệt độ máy cao	Cao	Có thể ảnh hưởng trải nghiệm và tuổi thọ thiết bị
+Quạt kêu to	Trung bình - Cao	Gây khó chịu khi sử dụng
+Pin chỉ 2 giờ	Cao	Tác động trực tiếp đến khả năng sử dụng
+Khiếu nại lặp lại	Rất cao	Nguy cơ mất khách hàng và phát sinh tranh chấp
+Bước 4. Facts - Hypotheses - Unknowns
+Facts
+Laptop mua được 10 ngày.
+Laptop bị nóng.
+Quạt kêu to.
+Pin dùng khoảng 2 giờ.
+Đã kiểm tra một lần.
+Tình trạng chưa cải thiện.
+Hypotheses
+Có thể tồn tại lỗi phần cứng.
+Có thể có tiến trình nền gây tải cao.
+Có thể pin hoạt động không đúng thiết kế.
+Có thể việc vệ sinh máy chưa xử lý đúng nguyên nhân.
+Unknowns
+Model máy.
+Cấu hình.
+Mức sử dụng CPU.
+Kết quả chẩn đoán kỹ thuật.
+Chính sách đổi trả của cửa hàng.
+Kết quả kiểm tra lần trước.
+Bước 5. Thông tin cần xác minh
+Thông tin	Lý do cần xác minhModel laptop	Xác định tiêu chuẩn nhiệt độ và pin
+Kết quả kiểm tra kỹ thuật	Đánh giá lỗi đã được xác nhận hay chưa
+Chính sách đổi trả	Xác định quyền lợi khách hàng
+Biên bản sửa chữa trước đó	Đánh giá quy trình xử lý trước
+Bước 6. Hai phương án xử lý
+Phương án 1: Kiểm tra kỹ thuật chuyên sâu và xử lý theo kết quả
+
+Ưu điểm
+
+Có căn cứ kỹ thuật rõ ràng.
+Giảm nguy cơ xử lý sai.
+
+Hạn chế
+
+Tốn thời gian xác minh.
+Khách hàng cần chờ thêm.
+Phương án 2: Xem xét đổi máy hoặc hoàn tiền nếu đáp ứng chính sách
+
+Ưu điểm
+
+Nâng cao sự hài lòng khách hàng.
+Giảm nguy cơ khiếu nại kéo dài.
+
+Hạn chế
+
+Phụ thuộc kết quả kiểm tra.
+Phụ thuộc chính sách hiện hành.
+PHẦN 2. PHẢN HỒI KHÁCH HÀNG
+
+Kính chào Quý khách,
+
+Cảm ơn Quý khách đã phản hồi về tình trạng thiết bị. Chúng tôi rất tiếc khi quá trình sử dụng laptop chưa đáp ứng được kỳ vọng của Quý khách.
+
+Qua thông tin cung cấp, chúng tôi ghi nhận các hiện tượng gồm nhiệt độ máy cao, quạt hoạt động lớn và thời lượng pin chưa như mong muốn. Đồng thời, chúng tôi hiểu rằng các vấn đề này vẫn tiếp diễn sau lần kiểm tra trước đó.
+
+Để có cơ sở đánh giá chính xác nguyên nhân và đề xuất hướng xử lý phù hợp, kính mong Quý khách cung cấp thêm thông tin về model máy hoặc mang thiết bị đến cửa hàng để đội ngũ kỹ thuật thực hiện kiểm tra chuyên sâu.
+
+Sau khi có kết quả xác minh, chúng tôi sẽ tư vấn phương án xử lý phù hợp theo tình trạng thực tế của thiết bị và các chính sách áp dụng.
+
+Chúng tôi chân thành cảm ơn sự hợp tác của Quý khách và sẽ nỗ lực hỗ trợ trong thời gian sớm nhất.

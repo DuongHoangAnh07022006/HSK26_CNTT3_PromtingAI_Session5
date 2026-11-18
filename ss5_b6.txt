@@ -1,0 +1,371 @@
+Bộ Prompt Hoàn Chỉnh Kết Hợp Chain-of-Thought + Prompt Chaining + Context Management
+1. Kiến trúc tổng thể
+PROMPT 1
+Phân tích tính khả thi
+(Chain-of-Thought)
+        ↓
+FEASIBILITY_REPORT
+
+PROMPT 2
+Xây dựng lịch trình chương trình
+(dùng FEASIBILITY_REPORT)
+        ↓
+EVENT_SCHEDULE
+
+PROMPT 3
+Lập dự toán ngân sách
+(dùng FEASIBILITY_REPORT + EVENT_SCHEDULE)
+        ↓
+BUDGET_PLAN
+
+PROMPT 4
+Phân công nhân sự
+(dùng tất cả dữ liệu trước)
+        ↓
+STAFF_PLAN
+
+PROMPT 5
+Xây dựng kế hoạch truyền thông
+(dùng toàn bộ ngữ cảnh trước)
+        ↓
+MEDIA_PLAN
+
+PROMPT 6
+Kiểm tra và hiệu chỉnh
+(Chain-of-Thought + Validation)
+        ↓
+FINAL_EVENT_PLAN
+
+PROMPT 7
+Tạo Context Summary
+(Context Management)
+        ↓
+PROJECT_CONTEXT
+
+Prompt 1: Phân tích tính khả thi
+Bạn là chuyên gia tổ chức sự kiện.
+
+Thông tin sự kiện:
+
+- Tên: AI Innovation Day
+- Quy mô: 150 sinh viên
+- Thời lượng: 1 ngày
+- Ngân sách tối đa: 15.000.000 VNĐ
+- Nhân sự tổ chức: 10 người
+- Mục tiêu:
+  Giúp sinh viên hiểu và trải nghiệm ứng dụng AI trong học tập và công việc
+
+Hãy suy nghĩ theo từng bước.
+
+Bước 1:
+Phân tích các yêu cầu tổ chức cơ bản.
+
+Bước 2:
+Xác định các hạng mục cần có.
+
+Bước 3:
+Đánh giá khả năng đáp ứng với:
+- 150 sinh viên
+- 10 nhân sự
+- 15 triệu đồng
+
+Bước 4:
+Liệt kê rủi ro chính.
+
+Bước 5:
+Kết luận tính khả thi.
+
+Trả kết quả JSON:
+
+{
+  "feasibility":"...",
+  "required_items":[],
+  "risks":[],
+  "assumptions":[]
+}
+
+Prompt 2: Xây dựng lịch trình
+Dựa trên:
+
+FEASIBILITY_REPORT
+
+Thiết kế lịch trình 1 ngày cho sự kiện.
+
+Yêu cầu:
+
+- Check-in
+- Khai mạc
+- Chia sẻ AI
+- Workshop thực hành
+- Minigame
+- Q&A
+- Tổng kết
+
+Mỗi hoạt động cần:
+
+- Thời gian
+- Mục tiêu
+- Người phụ trách
+
+Trả kết quả dạng bảng.
+
+Prompt 3: Lập dự toán ngân sách
+Sử dụng:
+
+FEASIBILITY_REPORT
+EVENT_SCHEDULE
+
+Hãy xây dựng dự toán ngân sách.
+
+Các bước bắt buộc:
+
+1. Liệt kê chi phí.
+2. Ước tính từng khoản.
+3. Tính tổng ngân sách.
+4. Kiểm tra:
+
+Tổng ngân sách ≤ 15.000.000 VNĐ
+
+Nếu vượt:
+Tự động điều chỉnh.
+
+Trả về:
+
+| Hạng mục | Chi phí |
+
+và báo cáo kiểm tra ngân sách.
+
+Prompt 4: Phân công nhân sự
+Sử dụng:
+
+EVENT_SCHEDULE
+BUDGET_PLAN
+
+Phân công cho đúng 10 nhân sự.
+
+Vai trò gồm:
+
+- Trưởng ban
+- Điều phối
+- Truyền thông
+- Check-in
+- Hậu cần
+- Kỹ thuật
+- MC
+
+Không được vượt quá 10 người.
+
+Mỗi người phải có:
+
+- Nhiệm vụ chính
+- Thời gian phụ trách
+- Công việc dự phòng
+
+Prompt 5: Kế hoạch truyền thông
+Sử dụng:
+
+EVENT_SCHEDULE
+STAFF_PLAN
+
+Lập kế hoạch truyền thông trước sự kiện 14 ngày.
+
+Kênh:
+
+- Facebook
+- Fanpage CLB
+- Group sinh viên
+
+Bao gồm:
+
+- Nội dung
+- Ngày đăng
+- Mục tiêu
+- CTA
+
+Phải hỗ trợ mục tiêu thu hút 150 sinh viên tham gia.
+
+Prompt 6: Kiểm tra và hiệu chỉnh
+Thực hiện Chain-of-Thought kiểm tra:
+
+INPUT:
+
+FEASIBILITY_REPORT
+EVENT_SCHEDULE
+BUDGET_PLAN
+STAFF_PLAN
+MEDIA_PLAN
+
+Bước 1:
+Kiểm tra lịch trình.
+
+Bước 2:
+Kiểm tra nhân sự.
+
+Bước 3:
+Kiểm tra ngân sách.
+
+Bước 4:
+Kiểm tra mục tiêu sự kiện.
+
+Bước 5:
+Kiểm tra liên kết giữa các hạng mục.
+
+Bước 6:
+Đề xuất hiệu chỉnh.
+
+Xuất:
+
+- Điểm phù hợp
+- Điểm chưa phù hợp
+- Hành động sửa
+- Kế hoạch cuối cùng
+
+Prompt 7: Context Management
+Tạo Project Context Summary.
+
+Mục đích:
+
+Nếu chuyển sang cuộc hội thoại mới,
+AI vẫn tiếp tục được kế hoạch.
+
+Tóm tắt tối đa 500 từ gồm:
+
+- Thông tin sự kiện
+- Lịch trình
+- Ngân sách
+- Nhân sự
+- Truyền thông
+- Rủi ro
+- Quyết định đã thống nhất
+
+Xuất JSON.
+
+2. Phân tích tính khả thi
+Tiêu chí	Đánh giáQuy mô 150 sinh viên	Khả thi
+Sự kiện 1 ngày	Khả thi
+10 nhân sự	Đủ cho sự kiện quy mô vừa
+Ngân sách 15 triệu	Khả thi nếu tận dụng cơ sở vật chất trường
+Nội dung AI	Phù hợp đối tượng sinh viên
+Rủi ro
+Số lượng tham gia thấp hơn dự kiến.
+Thiếu thiết bị trình chiếu.
+Workshop kéo dài thời gian.
+Nhân sự hỗ trợ không đồng đều.
+Chi phí phát sinh.
+Kết luận
+
+✅ Sự kiện khả thi với điều kiện kiểm soát ngân sách và tận dụng hạ tầng sẵn có của trường.
+
+3. Lịch trình sự kiện
+Thời gian	Hoạt động07:30-08:00	Check-in
+08:00-08:15	Khai mạc
+08:15-09:30	Talkshow: AI trong học tập
+09:30-09:45	Giải lao
+09:45-11:30	Workshop AI Tools
+11:30-13:30	Nghỉ trưa
+13:30-14:30	Demo ứng dụng AI
+14:30-15:00	Minigame AI Quiz
+15:00-16:00	Thảo luận nhóm
+16:00-16:45	Q&A
+16:45-17:00	Tổng kết và trao quà
+4. Bảng dự toán ngân sách
+Hạng mục	Chi phí (VNĐ)Banner sự kiện	1.500.000
+Nước uống	1.500.000
+Quà minigame	2.000.000
+In ấn tài liệu	1.000.000
+Hỗ trợ diễn giả	4.000.000
+Chụp ảnh truyền thông	1.500.000
+Dự phòng	2.500.000
+
+| Tổng cộng | 14.000.000 |
+
+Kiểm tra
+14.000.000 < 15.000.000
+
+
+✅ Không vượt ngân sách.
+
+5. Bảng phân công 10 nhân sự
+Nhân sự	Vai trò1	Trưởng ban
+2	Điều phối chương trình
+3	MC
+4	Truyền thông Facebook
+5	Truyền thông hình ảnh
+6	Check-in 1
+7	Check-in 2
+8	Hậu cần
+9	Kỹ thuật trình chiếu
+10	Hỗ trợ workshop
+6. Kế hoạch truyền thông trước sự kiện
+Ngày	Nội dungD-14	Công bố sự kiện
+D-12	Giới thiệu mục tiêu chương trình
+D-10	Giới thiệu diễn giả
+D-8	Giới thiệu workshop
+D-6	Chia sẻ lợi ích tham gia
+D-4	Đếm ngược
+D-2	Nhắc đăng ký
+D-1	Thông báo cuối
+D-Day	Livestream & cập nhật ảnh
+CTA
+Đăng ký tham gia AI Innovation Day ngay hôm nay.
+
+7. Project Context Summary
+{
+  "event_name": "AI Innovation Day",
+  "participants": 150,
+  "duration": "1 day",
+  "budget_limit": 15000000,
+  "actual_budget": 14000000,
+  "staff_count": 10,
+  "goal": "Giúp sinh viên hiểu và trải nghiệm AI trong học tập và công việc",
+  "main_activities": [
+    "Talkshow AI",
+    "Workshop AI Tools",
+    "Demo ứng dụng AI",
+    "Minigame",
+    "Q&A"
+  ],
+  "communication_period": "14 days before event",
+  "risks": [
+    "Chi phí phát sinh",
+    "Thiếu thiết bị",
+    "Lượng tham gia thấp",
+    "Lỗi kỹ thuật"
+  ]
+}
+
+8. Báo cáo kiểm tra và hiệu chỉnh
+Kiểm tra ngân sách
+
+✅ Tổng chi: 14.000.000 VNĐ
+ ✅ Không vượt giới hạn 15.000.000 VNĐ
+
+Kiểm tra nhân sự
+
+✅ Đúng 10 người
+ ✅ Có đủ các vai trò thiết yếu
+
+Kiểm tra lịch trình
+
+✅ Vừa trong 1 ngày
+ ✅ Có thời gian nghỉ và tương tác
+
+Kiểm tra mục tiêu
+
+✅ Nội dung bám sát chủ đề AI ứng dụng trong học tập và công việc
+
+Hiệu chỉnh đề xuất
+Chuẩn bị phương án dự phòng máy chiếu.
+Yêu cầu đăng ký trước để kiểm soát số lượng.
+Giữ ít nhất 1.000.000 VNĐ trong quỹ dự phòng cho phát sinh.
+Chuẩn bị khảo sát cuối chương trình để đánh giá hiệu quả.
+Kết luận
+
+Toàn bộ kế hoạch đáp ứng các ràng buộc:
+
+✅ Quy mô 150 sinh viên.
+✅ Thời lượng 1 ngày.
+✅ 10 nhân sự.
+✅ Ngân sách dưới 15 triệu đồng.
+✅ Có bước kiểm tra và hiệu chỉnh.
+✅ Kết hợp đầy đủ Chain-of-Thought, Prompt Chaining và Context Management.

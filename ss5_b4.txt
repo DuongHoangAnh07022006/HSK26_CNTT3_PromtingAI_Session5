@@ -1,0 +1,188 @@
+Prompt hoàn chỉnh: Phân tích kết quả học tập sinh viên bằng Chain-of-Thought
+Bạn là chuyên gia phân tích dữ liệu giáo dục hỗ trợ giảng viên đánh giá kết quả học tập.
+
+Nhiệm vụ của bạn là phân tích dữ liệu điểm số được cung cấp và đưa ra nhận định dựa hoàn toàn trên dữ liệu thực tế.
+
+YÊU CẦU QUAN TRỌNG
+
+Hãy suy nghĩ theo từng bước và thực hiện phân tích tuần tự:
+
+Tính toán → So sánh → Nhận định → Đề xuất
+
+Không được bỏ qua bước trung gian.
+
+Không được tự suy diễn nguyên nhân khiến sinh viên tăng hoặc giảm điểm.
+
+Chỉ sử dụng dữ liệu được cung cấp.
+
+Mọi nhận định phải kèm dữ liệu chứng minh.
+
+Phân biệt rõ:
+
+- Dữ liệu thực tế (Facts)
+- Nhận định dựa trên dữ liệu (Observations)
+- Thông tin cần xác minh thêm (Need Verification)
+
+=================================================
+
+DỮ LIỆU
+
+| Sinh viên | Tuần 1 | Tuần 2 | Tuần 3 |
+|------------|---------|---------|---------|
+| An | 8 | 7 | 5 |
+| Bình | 7 | 6 | 4 |
+| Chi | 9 | 8 | 8 |
+| Dũng | 6 | 5 | 3 |
+| Hà | 8 | 8 | 7 |
+
+=================================================
+
+THỰC HIỆN THEO CÁC BƯỚC SAU
+
+BƯỚC 1. TÍNH TOÁN
+
+Đối với từng sinh viên:
+
+- Chênh lệch Tuần 2 so với Tuần 1
+- Chênh lệch Tuần 3 so với Tuần 2
+- Chênh lệch Tuần 3 so với Tuần 1
+
+Hiển thị đầy đủ phép tính.
+
+=================================================
+
+BƯỚC 2. SO SÁNH
+
+So sánh:
+
+- Sinh viên có điểm cao nhất
+- Sinh viên có điểm thấp nhất
+- Sinh viên giảm nhiều nhất
+- Sinh viên ổn định nhất
+
+Mỗi kết luận phải nêu rõ dữ liệu chứng minh.
+
+=================================================
+
+BƯỚC 3. NHẬN ĐỊNH
+
+Xác định:
+
+- Nhóm sinh viên có xu hướng giảm liên tục
+- Nhóm sinh viên giữ được kết quả ổn định
+- Nhóm cần được quan tâm theo dõi thêm
+
+Chỉ dựa trên dữ liệu điểm số.
+
+Không suy đoán nguyên nhân.
+
+=================================================
+
+BƯỚC 4. THÔNG TIN CẦN XÁC MINH
+
+Liệt kê những thông tin mà giảng viên cần thu thập thêm trước khi kết luận nguyên nhân giảm điểm.
+
+=================================================
+
+BƯỚC 5. ĐỀ XUẤT GIẢI PHÁP
+
+Đưa ra 3 giải pháp hỗ trợ học tập.
+
+Mỗi giải pháp phải nêu:
+
+- Mục tiêu
+- Đối tượng áp dụng
+- Lợi ích kỳ vọng
+
+=================================================
+
+ĐỊNH DẠNG ĐẦU RA
+
+# PHẦN 1. BÁO CÁO PHÂN TÍCH
+
+## Bước 1. Kết quả tính toán
+
+## Bước 2. So sánh
+
+## Bước 3. Nhận định
+
+## Bước 4. Thông tin cần xác minh
+
+## Bước 5. Giải pháp hỗ trợ
+
+# PHẦN 2. TÓM TẮT KẾT LUẬN
+
+Bảng phân tích kết quả của 5 sinh viên
+Bước 1. Tính toán
+Sinh viên	Tuần 1	Tuần 2	Tuần 3	T2 - T1	T3 - T2	T3 - T1An	8	7	5	7 - 8 = -1	5 - 7 = -2	5 - 8 = -3
+Bình	7	6	4	6 - 7 = -1	4 - 6 = -2	4 - 7 = -3
+Chi	9	8	8	8 - 9 = -1	8 - 8 = 0	8 - 9 = -1
+Dũng	6	5	3	5 - 6 = -1	3 - 5 = -2	3 - 6 = -3
+Hà	8	8	7	8 - 8 = 0	7 - 8 = -1	7 - 8 = -1
+Bước 2. So sánh
+Tiêu chí	Sinh viên	Dữ liệu chứng minhĐiểm cao nhất ở Tuần 3	Chi	8 điểm
+Điểm thấp nhất ở Tuần 3	Dũng	3 điểm
+Giảm nhiều nhất	An, Bình, Dũng	Cùng giảm 3 điểm từ Tuần 1 đến Tuần 3
+Ổn định nhất	Chi và Hà	Chỉ giảm 1 điểm trong toàn bộ 3 tuần
+Bước 3. Nhận định
+Nhóm có xu hướng giảm liên tục
+An: 8 → 7 → 5
+Bình: 7 → 6 → 4
+Dũng: 6 → 5 → 3
+
+Dữ liệu cho thấy điểm số giảm qua cả 3 tuần, không có tuần nào phục hồi.
+
+Nhóm tương đối ổn định
+Chi: 9 → 8 → 8
+Hà: 8 → 8 → 7
+
+Điểm số thay đổi ít hơn so với các sinh viên còn lại.
+
+Nhóm cần được quan tâm theo dõi
+An
+Bình
+Dũng
+
+Lý do:
+
+Điểm giảm liên tục.
+Tổng mức giảm từ Tuần 1 đến Tuần 3 là 3 điểm.
+Bước 4. Thông tin cần giảng viên xác minh thêm
+
+Không thể kết luận nguyên nhân giảm điểm chỉ từ dữ liệu hiện có.
+
+Giảng viên nên xác minh:
+
+Tỷ lệ tham gia học của từng sinh viên.
+Mức độ hoàn thành bài tập.
+Kết quả bài thực hành lập trình.
+Thời gian tự học ngoài lớp.
+Các yếu tố cá nhân ảnh hưởng đến việc học.
+Độ khó và phạm vi kiến thức của từng bài kiểm tra.
+Hình thức kiểm tra giữa các tuần có thay đổi hay không.
+Ba nhận định quan trọng từ dữ liệu
+Nhận định 1
+
+Có 3/5 sinh viên (An, Bình, Dũng) xuất hiện xu hướng giảm điểm liên tục qua cả ba tuần.
+
+Nhận định 2
+
+Chi đang duy trì thành tích tốt nhất với điểm số luôn ở mức cao (9 → 8 → 8).
+
+Nhận định 3
+
+Mức giảm lớn nhất được ghi nhận là 3 điểm, xuất hiện ở An, Bình và Dũng.
+
+Ba giải pháp hỗ trợ học tập cụ thể
+Giải pháp 1: Theo dõi riêng nhóm giảm điểm liên tục
+Mục tiêu: Phát hiện sớm khó khăn trong học tập.
+Đối tượng: An, Bình, Dũng.
+Lợi ích kỳ vọng: Ngăn xu hướng giảm điểm kéo dài.
+Giải pháp 2: Tổ chức buổi ôn tập ngắn hàng tuần
+Mục tiêu: Củng cố kiến thức sau mỗi chủ đề.
+Đối tượng: Toàn bộ lớp.
+Lợi ích kỳ vọng: Giảm khoảng cách kết quả giữa các sinh viên.
+Giải pháp 3: Thực hiện đánh giá tiến độ cá nhân
+Mục tiêu: Theo dõi sự thay đổi kết quả học tập theo từng tuần.
+Đối tượng: Tất cả sinh viên.
+Lợi ích kỳ vọng: Giảng viên có dữ liệu đầy đủ hơn để hỗ trợ kịp thời.
